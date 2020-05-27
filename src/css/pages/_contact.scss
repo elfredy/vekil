@@ -1,0 +1,14 @@
+.contact{
+    padding: 2rem 0;
+
+    &__title {
+        @include font($Mso5, 4rem, $color-primary);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__map{
+        width: 99%;
+        height: 65rem;
+    }
+}

@@ -1,0 +1,58 @@
+.homeInformation {
+    &__title {
+        box-shadow: 0 0 2.5rem 0 rgba($color-shadow, 0.1);
+    }
+
+    .ui-state-default {
+        background: none;
+    }
+
+    .ui-accordion-header {
+        border: none;
+        background-color: $color-white;
+        display: flex;
+        justify-content: space-between;
+        outline: none;
+        align-items: center;
+        padding: 3rem 3rem 0 3rem;
+    }
+
+    .ui-accordion-header-icon {
+        display: none;
+    }
+
+    .ui-widget-content {
+        border: none;
+        height: 100% !important ;
+
+        & p {
+            @include font($Sgui, 1.65rem, $color-secondary);
+            padding: 0 1rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    }
+
+    &__plus,
+    &__minus {
+        display: inline;
+        margin-top: -4rem;
+    }
+
+    &__plus {
+        margin-left: auto;
+
+        margin-right: 2rem;
+    }
+
+    &__img {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    &__firstText {
+        width: 50%;
+        float: right;
+        padding-left: 2rem;
+    }
+}

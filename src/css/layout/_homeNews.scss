@@ -1,0 +1,39 @@
+.homeNews{
+    padding: 2rem 0;
+    
+    &__title{
+        @include font($Mso5,4rem,$color-primary);
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    & p{
+        @include font($Sgui,1.65rem,$color-primary);
+        text-align: center;
+    }
+
+    &__cards{
+    }
+
+    &__carousel{
+        overflow: hidden;
+        padding:2rem 0;
+        
+
+        .owl-stage-outer{
+            overflow: visible !important;
+        }
+
+        .owl-dots .owl-dot{
+            outline: none;
+        }
+
+        .owl-dots .owl-dot span {
+            background-color: $color-primary !important;
+        }
+
+        .owl-dots .active span{
+            background-color: $color-secondary !important;
+        }
+    }
+}

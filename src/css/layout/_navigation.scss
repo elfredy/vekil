@@ -1,0 +1,44 @@
+.myNav{
+    z-index: 2;
+    padding: 0 ;
+    @include respondmax(md){
+        display: none;
+    }
+
+    .nav-item{
+        display: flex;
+        height: 8.5rem;
+        padding: 0 2rem;
+        align-items: center;
+        cursor: pointer;
+        @include respondmax(xl){
+            padding: 0 .5rem;
+        }
+
+        @include respondmax(lg){
+            height: 6.5rem;
+        }
+        
+        &:hover{
+            
+            .nav-link{
+                color: $color-white;
+                text-decoration: none;
+            }
+        }
+        
+    }
+
+    .nav-link{
+        @include font($Mso5,1.6rem,$color-secondary);
+
+        @include respondmax(xl){
+            font-size: 1.2rem;
+        }
+        
+
+        @include respondmax(lg){
+            font-size: .8rem;
+        }
+    }
+}

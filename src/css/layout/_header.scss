@@ -1,0 +1,44 @@
+.header {
+    background-color: $color-white;
+    z-index: 8;
+    transition: all .5s ;
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__searchLink {
+        margin-right: 2rem;
+
+        @include respondmax(lg) {
+            width: 2.5rem;
+        }
+    }
+
+    &__Slider {
+        padding: 2rem 0;
+        background-color: $color-grey-light;
+
+    }
+
+    .headerCarousel {
+        padding: 2rem 0;
+        overflow: hidden;
+
+        .owl-stage-outer{
+            overflow: visible;
+        }
+    }
+}
+
+.headerFix{
+    position: fixed;
+    width: 100% !important;
+    display: none;
+    background-color: $color-white;
+    z-index: 8;
+    transition: all .5s ease;
+    box-shadow: 0 1px 7px rgba($color-shadow,.4);
+}
+
+

@@ -1,0 +1,94 @@
+.navDropdown {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        .navDropdown__content {
+            top: 8.5rem;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        width: 105%;
+        left: 2rem;
+        top: 13.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    &__item {
+        height: 4.5rem;
+        background-color: $color-secondary;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        left: 1.8rem;
+
+        @include respondmax(xl){
+            left: 6rem;
+        }
+    }
+
+    &__link {
+        @include font($Mso5, 1.6rem, $color-white);
+        padding-left: 3rem;
+
+        @include respondmax(xl){
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            color: $color-white;
+            text-decoration: none;
+        }
+    }
+}
+
+.langDropdown {
+    position: relative;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-secondary;
+    border-radius: .5rem;
+
+
+ @include respondmax(xl){
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+    
+    @include respondmax(lg){
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .collapsing,
+    .show {
+        position: absolute !important;
+    }
+
+    &__firstLink{
+        color: $color-white !important;
+        display: inline-block;
+        margin: auto;
+        padding: .8rem 1rem;
+
+        @include respondmax(lg){
+            pad: .4rem .7rem;
+        }
+    }
+
+    &__link{
+        transition: all .3s;
+        background-color: $color-white;
+        &:hover{
+            background-color: $color-secondary;
+            color: $color-white !important;
+        }
+    }
+    
+}

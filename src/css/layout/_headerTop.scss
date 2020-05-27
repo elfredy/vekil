@@ -1,0 +1,30 @@
+.headerTop {
+    display: flex;
+    z-index: 1;
+    height: 34rem;
+    
+
+    background: linear-gradient(to left bottom rgba($color-primary, 0.5), rgba($color-primary, 0.5)),
+        url("../../img/headertopback.png");
+
+    &__logo{
+        width: 22rem;
+    }
+
+    &__right{
+
+        & img{
+            @include respondmin(xxl){
+                width: 42rem;
+            }
+        }
+    }
+
+
+    &__title{
+        @include font($Sgui,3.2rem,$color-white);
+        max-width: 48rem;
+        margin-bottom: 2rem;
+    }
+
+}
