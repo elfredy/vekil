@@ -4,13 +4,36 @@
     align-items: center;
     height: 16rem;
 
+    @include respondmax(xl) {
+        .col {
+            padding: 0;
+        }
+    }
+
+    @include respondmax(sm) {
+        height: 35rem;
+    }
+
     &__logo {
         width: 20rem;
 
+        @include respondmax(xl) {
+            width: 10rem;
+            margin-top: 1rem;
+        }
         & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include respondmax(sm) {
+            margin-left: 16.5rem;
+            margin-top: -2rem;
+        }
+
+        @include respondmax(s) {
+            margin-left: 11rem;
         }
     }
     &__list {
@@ -20,51 +43,121 @@
         margin: 0;
         width: 100%;
         padding-left: 10rem;
+
+        @include respondmax(xl) {
+            padding-left: 5rem;
+        }
+
+        @include respondmax(sm) {
+            padding-left: 0;
+            margin-top: 2rem;
+            margin-left: -3rem;
+        }
     }
 
     &__item {
         width: calc(100% / 4);
         display: inline-block;
         padding-left: 2rem;
+
+        @include respondmax(xl) {
+            padding-left: 1rem;
+        }
+
+        @include respondmax(lg) {
+            width: calc(100% / 3.2);
+        }
+        @include respondmax(sm) {
+            width: 100%;
+        }
     }
 
     &__link {
         display: block;
-        @include font($Mso5,1.6rem,$color-white);
-        
+        @include font($Mso5, 1.6rem, $color-white);
 
-        &:hover{
+        @include respondmax(xxl) {
+            font-size: 1.4rem;
+        }
+
+        @include respondmax(xl) {
+            font-size: 1rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.2rem;
+            text-align: left !important;
+        }
+
+        &:hover {
             text-decoration: none;
             color: $color-grey-dark;
         }
 
-        &::before{
+        &::before {
             content: ".";
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             color: $color-white;
             font-size: 2rem;
         }
-        
     }
-    &__sosial{
+    &__sosial {
         margin-top: 2rem;
-        & a{
+
+        @include respondmax(sm) {
+            display: flex;
+            margin-top: 25rem;
+            margin-left: -31rem;
+            justify-content: space-around;
+            margin-right: 9rem;
+        }
+
+        @include respondmax(xs){
+            margin-left: -28rem;
+        }
+        & a {
             background-color: $color-primary;
             color: $color-white;
             padding: 1rem;
             padding-top: 1.5rem;
             text-decoration: none;
-            border-radius: .2rem;
-            transition: all .3s;
+            border-radius: 0.2rem;
+            transition: all 0.3s;
 
-            &:hover{
+            @include respondmax(xxl) {
+                padding: 0.5rem;
+                padding-top: 1rem;
+            }
+
+            @include respondmax(xl) {
+                padding: 0 0.5rem;
+                padding-top: 1rem;
+            }
+
+            @include respondmax(lg) {
+                padding: 0.5rem;
+                padding-top: 1rem;
+            }
+
+            @include respondmax(sm) {
+                display: block;
+            }
+
+            &:hover {
                 text-decoration: none;
                 color: $color-white;
                 background-color: $color-secondary;
             }
+
+            & .fa-2x {
+                @include respondmax(lg) {
+                    font-size: 1.2rem !important;
+                }
+
+                @include respondmax(sm) {
+                    font-size: 2rem !important;
+                }
+            }
         }
-
-     
     }
-
 }

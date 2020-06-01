@@ -12,6 +12,12 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include respondmax(sm) {
+            display: block;
+            padding: 2rem;
+            text-align: center;
+        }
     }
 
     &__modal {
@@ -39,6 +45,15 @@
     &__title {
         @include font($Mso5, 3rem, $color-white);
         max-width: 38rem;
+
+        @include respondmax(lg) {
+            font-size: 2rem;
+        }
+
+        @include respondmax(sm) {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
     }
 
     &__link {
@@ -52,6 +67,22 @@
         padding: 0 2rem;
         transition: all 0.3s;
 
+        @include respondmax(sm) {
+            font-size: 1.6rem;
+            width: 32rem;
+            height: 6rem;
+            margin: 0 auto;
+
+            margin-top: 5rem;
+        }
+
+        @include respondmax(s) {
+            width: 27rem;
+        }
+
+        @include respondmax(xs) {
+            width: 24rem;
+        }
         &:hover {
             text-decoration: none;
             color: $color-secondary;
@@ -68,10 +99,27 @@
         max-height: 75%;
         margin: auto;
 
+        @include respondmax(sm) {
+            padding: 2rem;
+            max-width: 87%;
+        }
+
         & p {
             @include font($Sgui, 1.6rem, $color-primary);
             text-align: center;
             margin-bottom: 2rem;
+
+            @include respondmax(sm) {
+                margin-bottom: 1rem;
+                font-size: 1.3rem;
+            }
+
+            & img {
+                @include respondmax(sm) {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
         }
     }
 
@@ -79,6 +127,10 @@
         @include font($Mso5, 4rem, $color-white);
         text-align: center;
         margin-bottom: 1rem;
+
+        @include respondmax(sm) {
+            font-size: 1.8rem;
+        }
     }
 
     &__input,
@@ -94,6 +146,12 @@
         &:focus {
             outline: none;
             box-shadow: none;
+        }
+
+        @include respondmax(sm) {
+            height: 4rem;
+            font-size: 1.6rem;
+            width: 100%;
         }
     }
 
@@ -114,6 +172,10 @@
             outline: none;
             box-shadow: none;
         }
+
+        @include respondmax(sm) {
+            height: 10rem;
+        }
     }
 
     &__input {
@@ -123,6 +185,12 @@
         width: 48%;
         margin-left: 1rem;
 
+        @include respondmax(sm) {
+            height: 4rem;
+            font-size: 1.6rem;
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     &__send {
@@ -146,6 +214,20 @@
         height: 4rem;
         margin-left: auto;
         margin-right: 14%;
+
+        @include respondmax(sm) {
+            width: 3rem;
+            height: 3rem;
+
+            margin-right: -1%;
+        }
+
+        & img {
+            @include respondmax(sm) {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
 
         &:hover {
             text-decoration: none;

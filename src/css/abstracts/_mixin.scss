@@ -43,12 +43,20 @@
 	}
 
 	@if $breakpoint == xxl {
-		@media (min-width: 1330px) {@content};
+		@media (min-width: 1441px) {@content};
 	}
 }
 
 
 @mixin respondmax($breakpoint){
+
+	@if $breakpoint == xs {
+		@media (max-width: 320px) {@content};
+	}
+	
+	@if $breakpoint == s {
+		@media (max-width: 375px) {@content};
+	}
 	@if $breakpoint == sm {
 		@media (max-width: 575px) {@content};
 	}
@@ -63,6 +71,10 @@
 
 	@if $breakpoint == xl {
 		@media (max-width: 1199px) {@content};
+	}
+
+	@if $breakpoint == xxl {
+		@media (max-width: 1440px) {@content};
 	}
 }
 

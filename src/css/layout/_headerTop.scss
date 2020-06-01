@@ -9,14 +9,23 @@
 
     &__logo{
         width: 22rem;
+
+        @include respondmax(lg){
+            width: 15rem;
+        }
     }
 
     &__right{
 
+        
         & img{
             @include respondmin(xxl){
                 width: 42rem;
             }
+        }
+
+        @include respondmax(lg){
+            width: 50%;
         }
     }
 
@@ -25,6 +34,14 @@
         @include font($Sgui,3.2rem,$color-white);
         max-width: 48rem;
         margin-bottom: 2rem;
+
+        @include respondmax(lg){
+            font-size: 2.4rem;
+        }
+
+        @include respondmax(sm){
+            font-size: 1.8rem;
+        }
     }
 
 }

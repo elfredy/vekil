@@ -5,6 +5,14 @@
     transition: all .3s;
     margin: 0 auto;
 
+    @include respondmax(s){
+        width: 16.5rem;
+    }
+
+    @include respondmax(s){
+        width: 14rem;
+    }
+
     &__img{
         width: 100%;
         height: 12rem;

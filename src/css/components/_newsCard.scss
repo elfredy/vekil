@@ -9,6 +9,16 @@
     transition: all .4s;
     margin: 0 auto;
 
+
+    @include respondmax(lg){
+        width: 26rem;
+        height: 42rem;
+    }
+
+    @include respondmax(sm){
+        width: 100%;
+    }
+
     &__img {
         width: 100%;
         height: 21rem;
@@ -17,6 +27,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include respondmax(lg){
+            height: 17rem;
         }
     }
 
@@ -33,11 +47,23 @@
     &__bottom {
         position: relative;
         padding: 3rem 1.5rem 2.5rem 3.5rem;
+
+        @include respondmax(lg){
+            padding: 1rem .8rem 1.8rem 2.5rem;
+
+        }
         & h5 {
             @include font($Sgui, 2rem, $color-primary);
             margin: 1rem 0;
             font-weight: 600;
+
+            @include respondmax(lg){
+                font-size: 1.8rem;
+    
+            }
         }
+
+        
 
         & p {
             text-align: left !important;
@@ -46,6 +72,10 @@
 
         & span {
             @include font($Sgui, 1.6rem, $color-primary);
+
+            @include respondmax(lg){
+                font-size: 1.3rem;    
+            }
         }
 
         & .fakeButton {
@@ -66,6 +96,16 @@
             &:hover{
                 background-color: $color-white;
                 color: $color-primary;
+            }
+
+            @include respondmax(lg){
+                margin-top: 1rem;
+                
+ 
+            }
+
+            @include respondmax(sm){
+                margin-right: auto;
             }
         }
     }

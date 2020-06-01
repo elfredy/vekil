@@ -20,7 +20,7 @@
 	bottom: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: $color-white;
+	background-color: $color-primary;
 	width: 100%;
 	box-sizing: border-box;
 	transition: all 250ms;
@@ -28,7 +28,7 @@
 	transform: translateZ(0) translateX(-100%);
 	text-align: center;
 	z-index: 1;
-	height: 30rem;
+	height: 32rem;
 }
 
 .mobActive {
@@ -50,10 +50,11 @@
 	}
 	&__link {
 		text-decoration: none;
-		@include font($Mso5, 1.6rem, $color-secondary);
+		@include font($Mso5, 1.6rem, $color-white);
 		transition: all 0.3s;
 		&:hover {
 			text-decoration: none;
+			color: $color-grey-dark;
 		}
 	}
 }
@@ -71,12 +72,12 @@
 	cursor: pointer;
 	position: absolute;
 	right: -1rem;
-	top: -1rem;
+	top: 0;
 }
 .line {
 	width: 2.5rem;
 	height: 2px;
-	background-color: $color-black;
+	background-color: $color-white;
 	transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease, top 0.3s ease;
 	margin: 0.8rem 0;
 }
@@ -88,7 +89,7 @@
 		height: 2px;
 		width: 2.5rem;
 		margin-top: 1.4rem;
-		background-color: $color-black;
+		background-color: $color-white;
 		transition: all 0.2s;
 	}
 }
@@ -119,7 +120,7 @@
 
 .content .on{
 	position: fixed;
-    top: -1.2rem;
+    top: -.2rem;
     right: 9.5rem;
 
     @include respondmax(sm){

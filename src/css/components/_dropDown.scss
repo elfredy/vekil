@@ -6,6 +6,12 @@
             top: 8.5rem;
             visibility: visible;
             opacity: 1;
+
+            @include respondmax(lg){
+                top: 6.5rem;
+
+    
+            }
         }
     }
 
@@ -30,6 +36,11 @@
         @include respondmax(xl){
             left: 6rem;
         }
+
+        @include respondmax(lg){
+            left: 1rem;
+            height: 3.4rem;
+        }
     }
 
     &__link {
@@ -38,6 +49,12 @@
 
         @include respondmax(xl){
             font-size: 1.2rem;
+        }
+
+        
+        @include respondmax(lg){
+            font-size: 1rem;
+
         }
 
         &:hover {

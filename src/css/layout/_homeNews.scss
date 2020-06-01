@@ -10,6 +10,10 @@
     & p{
         @include font($Sgui,1.65rem,$color-primary);
         text-align: center;
+
+        @include respondmax(lg){
+            font-size: 1.4rem;
+        }
     }
 
     &__cards{
